@@ -7,12 +7,13 @@ from django.db import models, migrations
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('users', '0001_initial'),
+        ('polls', '0001_initial'),
     ]
 
     operations = [
-        migrations.RenameModel(
-            old_name='user',
-            new_name='users',
+        migrations.AlterField(
+            model_name='question',
+            name='pub_date',
+            field=models.DateTimeField(verbose_name='date published'),
         ),
     ]

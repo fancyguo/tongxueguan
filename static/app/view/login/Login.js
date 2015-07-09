@@ -1,8 +1,8 @@
-Ext.define('TXG.view.Login', {
+Ext.define('TXG.view.login.Login', {
     extend: 'Ext.window.Window',
     requires: [
-        'TXG.view.LoginModel',
-        'TXG.view.LoginController'
+        'TXG.view.login.LoginModel',
+        'TXG.view.login.LoginController'
     ],
     viewModel: {type: 'login'},
     controller: 'login',
@@ -37,14 +37,14 @@ Ext.define('TXG.view.Login', {
     bbar: [
         '->',
         {
-            itemId: 'cancel',
-            text: TXG.locale.CANCEL,
-            handler: 'onCancelBtnClick'
-        },
-        {
             itemId: 'login',
             text: TXG.locale.LOGIN,
             handler: 'onLoginBtnClick'
+        },
+        {
+            itemId: 'cancel',
+            text: TXG.locale.CANCEL,
+            handler: 'onCancelBtnClick'
         }
     ]
 });

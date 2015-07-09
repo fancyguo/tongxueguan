@@ -1,4 +1,4 @@
-Ext.define('TXG.view.LoginController', {
+Ext.define('TXG.view.login.LoginController', {
     extend: 'Ext.app.ViewController',
     alias: 'controller.login',
 
@@ -8,7 +8,7 @@ Ext.define('TXG.view.LoginController', {
 
     onLoginBtnClick: function(){
         var data = this.getViewModel().getData();
-
-        Ext.Msg.alert('Login', Ext.String.format('Login: {0}<br> Password: {1}', data.login, data.password));
+        console.log(location);
+        /*Ext.Msg.alert('Login', Ext.String.format('Login: {0}<br> Password: {1}', data.login, data.password));*/
     }
 });

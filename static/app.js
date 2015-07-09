@@ -4,6 +4,6 @@ Ext.application({
     //
 
     launch: function(){
-        Ext.create('TXG.view.Login').show();
+        Ext.create('TXG.view.login.Login').show();
     }
 });
