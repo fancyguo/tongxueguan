@@ -9,6 +9,16 @@ Ext.define('TXG.view.login.LoginController', {
     onLoginBtnClick: function(){
         var data = this.getViewModel().getData();
         console.log(location);
+        Ext.Ajax.request({
+            url: 'http://localhost:8889/user/login/',
+            params: data,
+            cors: true,
+            paramsAsJson: true,
+            /*withCredentials: true,*/
+            success: function(response){
+                console.log(response);
+            }
+        });
         /*Ext.Msg.alert('Login', Ext.String.format('Login: {0}<br> Password: {1}', data.login, data.password));*/
     }
 });
