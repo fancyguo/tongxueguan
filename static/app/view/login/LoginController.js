@@ -16,9 +16,13 @@ Ext.define('TXG.view.login.LoginController', {
             paramsAsJson: true,
             /*withCredentials: true,*/
             success: function(response){
-                console.log(response);
+                var responseJson = JSON.parse(response.responseText);
+                console.log(responseJson);
+                if(responseJson.success){
+                    Ext.Msg.alert('Login', Ext.String.format('Login: {0}<br> Password: {1}', data.login, data.password));
+                }
+                
             }
         });
-        /*Ext.Msg.alert('Login', Ext.String.format('Login: {0}<br> Password: {1}', data.login, data.password));*/
     }
 });
